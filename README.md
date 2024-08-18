@@ -8,15 +8,19 @@
 #### Mongoose
 
 
+
+
 ## Required Environment Variables
 API_SERVER_BASE_URL=""
 
 AUTH_SECRET="anything"
 
 GITHUB_CLIENT_ID=
+
 GITHUB_CLIENT_SECRET=
 
 GOOGLE_CLIENT_ID=
+
 GOOGLE_CLIENT_SECRET=
 
 MONGO_DB_CONNECTION_STRING=
