@@ -28,6 +28,10 @@ MONGO_DB_CONNECTION_STRING=
 ## To start a website with 3rd Part Login,
 ## Clone ME!
 
+Before deployment, make sure to change the OAuth settings for the providers
+such us, 
+- Callbacks
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
