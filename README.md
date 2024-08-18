@@ -10,6 +10,7 @@
 
 ## Required Environment Variables
 API_SERVER_BASE_URL=""
+
 AUTH_SECRET="anything"
 
 GITHUB_CLIENT_ID=
