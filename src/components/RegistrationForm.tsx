@@ -36,9 +36,9 @@ const RegistrationForm = () => {
         
 
       } catch (e) {
-        console.error(e);
-        setError("Check your Credentials");
-    }
+            console.error(e);
+            setError("Check your Credentials");
+        }
     }
 
     return (

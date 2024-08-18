@@ -1,9 +1,8 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { User } from "./model/user-model";
-import bcrypt from "bcryptjs"; // Correct import for bcryptjs
+import { UserModel } from "./model/user-model";
+import { dbConnect } from "./lib/mongo";
 
 export const {
     handlers: { GET, POST },
@@ -12,47 +11,9 @@ export const {
     signOut,
 } = NextAuth({
     session: {
-      strategy: 'jwt',
+        strategy: 'jwt',
     },
     providers: [
-        CredentialsProvider({
-            credentials: {
-                email: { label: "Email", type: "email" },
-                password: { label: "Password", type: "password" },
-            },
-            async authorize(credentials) {
-                if (!credentials || typeof credentials.email !== 'string' || typeof credentials.password !== 'string') {
-                    return null;
-                }
-                
-                try {
-                    const user = await User.findOne({
-                        email: credentials.email
-                    });
-                    console.log(user);
-                    if (user) {
-                        const isMatch = await bcrypt.compare(
-                            credentials.password,
-                            user.password
-                        );
-
-                        if (isMatch) {
-                            return user;
-                        } else {
-                            throw new Error("Email or Password is not correct");
-                        }
-                    } else {
-                        throw new Error("User not found");
-                    }
-                } catch (error) {
-                    if (error instanceof Error) {
-                        throw new Error(error.message);
-                    } else {
-                        throw new Error("An unknown error occurred");
-                    }
-                }
-            },
-        }),
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID!,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
@@ -76,4 +37,25 @@ export const {
             },
         }),
     ],
+    callbacks: {
+        async signIn({ user, account, profile }) {
+            try {
+                await dbConnect();
+                const existingUser = await UserModel.findOne({ email: user.email });
+                if (!existingUser) {
+                    const newUser = new UserModel({
+                        email: user.email,
+                    });
+                    await newUser.save();
+                    console.log("NEW USER IS ADDED:", user);
+                } else {
+                    console.log("User is already existing");
+                }
+                return true; // Ensure the callback returns true
+            } catch (error) {
+                console.error("Error during sign-in:", error);
+                return false; // Return false if there is an error
+            }
+        },
+    },
 });

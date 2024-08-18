@@ -1,4 +1,4 @@
-import { User } from "@/model/user-model";
+import { UserModel } from "@/model/user-model";
 
 interface IUser {
   name: string;
@@ -8,7 +8,7 @@ interface IUser {
 
 export async function createUser(user: IUser) {
   try {
-    await User.create(user);
+    await UserModel.create(user);
   } catch (e) {
     if (e instanceof Error) {
       throw new Error(e.message);

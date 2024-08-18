@@ -31,7 +31,7 @@ const LoginForm = () => {
     return (
         <>
             <div className="text-xl text-red-500">{error}</div>
-            <form 
+            {/* <form 
                 className="my-5 flex flex-col items-center border p-3 border-gray-200 rounded-md"
                 onSubmit={onSubmit}>
                 <div className="my-2">
@@ -47,7 +47,7 @@ const LoginForm = () => {
                 <button type="submit" className="bg-orange-300 mt-4 rounded flex justify-center items-center w-36">
                     Credential Login
                 </button>
-            </form>
+            </form> */}
             <SocialLogins />
         </>
     );
