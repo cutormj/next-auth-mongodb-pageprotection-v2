@@ -1,6 +1,11 @@
 ## NextJS Website Template
-##### NextJS Authjs.dev MongoDB bycrypt TailwindCSS TypeScript Mongoose
-
+##### NextJS      
+##### Authjs.dev
+##### MongoDB
+##### bycrypt
+##### TailwindCSS
+##### TypeScript
+##### Mongoose
 
 
 
