@@ -1,5 +1,6 @@
 ## NextJS Website Template
-[NextJS] [Authjs.dev] [MongoDB] [Mongoose] [bycrypt] [TailwindCSS] [TypeScript]
+### NextJS
+ [Authjs.dev] [MongoDB] [Mongoose] [bycrypt] [TailwindCSS] [TypeScript]
 
 
 
