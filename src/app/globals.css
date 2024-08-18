@@ -31,3 +31,61 @@ body {
     text-wrap: balance;
   }
 }
+
+/* For InitiateWebsite Component */
+
+/* globals.css */
+
+.initiate-website-form {
+  max-width: 32rem; /* max-w-2xl */
+  margin: 0 auto; /* mx-auto */
+  padding: 1rem; /* p-4 */
+}
+
+.initiate-website-form h3 {
+  grid-column: span 1 / span 1; /* col-span-1 */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.initiate-website-form h4 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.initiate-website-form label {
+  display: block; /* block */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.initiate-website-form input {
+  margin-top: 0.25rem; /* mt-1 */
+  display: block; /* block */
+  width: 100%; /* w-full */
+  border-radius: 0.375rem; /* rounded-md */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  padding: 0.5rem; /* py-2 px-4 */
+  transition: border-color 0.2s, box-shadow 0.2s; /* focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 */
+}
+
+.initiate-website-form input:focus {
+  border-color: #6366f1; /* focus:border-indigo-500 */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* focus:ring focus:ring-indigo-200 focus:ring-opacity-50 */
+}
+
+.initiate-website-form button {
+  margin-top: 1rem; /* mt-4 */
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white; /* text-white */
+  font-weight: bold; /* font-bold */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border-radius: 0.375rem; /* rounded */
+  transition: background-color 0.2s; /* hover:bg-blue-700 */
+}
+
+.initiate-website-form button:hover {
+  background-color: #2563eb; /* hover:bg-blue-700 */
+}

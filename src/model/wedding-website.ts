@@ -2,6 +2,10 @@ import mongoose, { Schema, Document, Model } from "mongoose";
 
 interface IWeddingWebsite extends Document {
   initiator: mongoose.Types.ObjectId; // Reference to a user
+  couples: {
+    groom: { name: {first: string, last: string}},
+    bride: { name: {first: string, last: string}}
+  }
   introductions: {
     title: string;
     subtitle: string;
