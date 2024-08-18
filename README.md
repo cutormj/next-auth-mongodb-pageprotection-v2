@@ -1,4 +1,4 @@
-## NextJS Website Template
+# NextJS Website Template
 #### NextJS      
 #### Authjs.dev
 #### MongoDB
@@ -8,7 +8,17 @@
 #### Mongoose
 
 
+## Required Environment Variables
+API_SERVER_BASE_URL=""
+AUTH_SECRET="anything"
 
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+MONGO_DB_CONNECTION_STRING=
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
