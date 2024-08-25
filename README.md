@@ -10,14 +10,19 @@
 
 
 
+
 ## Required Environment Variables
-API_SERVER_BASE_URL=""
+API_SERVER_BASE_URL="http://localhost:3000"
 
 AUTH_SECRET="anything"
 
 GITHUB_CLIENT_ID=
 
 GITHUB_CLIENT_SECRET=
+
+
+Sign to Google Cloud Console and create a new project
+https://console.cloud.google.com/apis/credentials
 
 GOOGLE_CLIENT_ID=
 
