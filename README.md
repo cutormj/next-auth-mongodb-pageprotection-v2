@@ -42,11 +42,13 @@ Generate cluster credentials and copy
 Initiate connection method
 Choose "Drivers"
 
+Name your database related to your project in path 
+## src/mongo.ts dbName
+
 ## To start a website with 3rd Part Login,
 ## Clone ME!
 
-Name your database related to your project in path 
-## src/mongo.ts dbName
+
 
 Before deployment, make sure to change the OAuth settings for the providers
 such us, 
