@@ -28,6 +28,7 @@ GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 
 # For MONGO_DB_CONNECTION_STRING, make sure to create different project in MONGO_DB to avoid confusions
+https://cloud.mongodb.com/
 
 MONGO_DB_CONNECTION_STRING=
 
