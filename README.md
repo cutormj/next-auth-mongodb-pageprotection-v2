@@ -23,14 +23,21 @@ GOOGLE_CLIENT_ID=
 
 GOOGLE_CLIENT_SECRET=
 
+# For MONGO_DB_CONNECTION_STRING, make sure to create different project in MONGO_DB to avoid confusions
+
 MONGO_DB_CONNECTION_STRING=
 
 ## To start a website with 3rd Part Login,
 ## Clone ME!
 
+Name your database related to your project in path 
+## src/mongo.ts dbName
+
 Before deployment, make sure to change the OAuth settings for the providers
 such us, 
 - Callbacks
+
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
