@@ -16,7 +16,7 @@ const NavBar: React.FC<{ user: User }> = ({ user }) => {
 
   return (
     <nav className="bg-white p-3 flex justify-between items-center shadow-lg">
-      <div className=" text-lg">APP NAME Update me! Components/NavBar.tsx</div>
+      <div className=" text-lg">Joseph</div>
       <div className="relative">
         <div className="w-10 h-10 rounded-full cursor-pointer overflow-hidden" onClick={() => setDropdownOpen(!dropdownOpen)}>
           <Image

@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "!!! UPDATE ME! app/Layout.tsx",
+  title: "Joseph",
   description: "This is it!",
 };
 

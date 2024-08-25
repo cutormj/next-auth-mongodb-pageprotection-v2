@@ -10,7 +10,6 @@
 
 
 
-
 ## Required Environment Variables
 API_SERVER_BASE_URL="http://localhost:3000"
 
@@ -33,11 +32,23 @@ https://cloud.mongodb.com/
 
 MONGO_DB_CONNECTION_STRING=
 
-## To start a website with 3rd Part Login,
-## Clone ME!
+In MONGODB, after creation of new Project,
+Update the Network Access and 
+add IP Address and allow anywhere
+Build a Cluster
+Choose M0 FREE
+Name your Cluster like "ClusterPortfolio"
+Generate cluster credentials and copy
+Initiate connection method
+Choose "Drivers"
 
 Name your database related to your project in path 
 ## src/mongo.ts dbName
+
+## To start a website with 3rd Part Login,
+## Clone ME!
+
+
 
 Before deployment, make sure to change the OAuth settings for the providers
 such us, 
