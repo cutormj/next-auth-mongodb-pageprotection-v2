@@ -32,6 +32,16 @@ https://cloud.mongodb.com/
 
 MONGO_DB_CONNECTION_STRING=
 
+In MONGODB, after creation of new Project,
+Update the Network Access and 
+add IP Address and allow anywhere
+Build a Cluster
+Choose M0 FREE
+Name your Cluster like "ClusterPortfolio"
+Generate cluster credentials and copy
+Initiate connection method
+Choose "Drivers"
+
 ## To start a website with 3rd Part Login,
 ## Clone ME!
 
