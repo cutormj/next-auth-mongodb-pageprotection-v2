@@ -43,11 +43,13 @@ export const {
                 await dbConnect();
                 const existingUser = await UserModel.findOne({ email: user.email });
                 if (!existingUser) {
-                    const newUser = new UserModel({
-                        email: user.email,
-                    });
-                    await newUser.save();
-                    console.log("NEW USER IS ADDED:", user);
+                    // const newUser = new UserModel({
+                    //     email: user.email,
+                    // });
+                    // await newUser.save();
+                    // console.log("NEW USER IS ADDED:", user);
+                    console.log("NOTE!!! Auto Registration from Provider Sign-In is disabled. Do it manually or please check auth.ts");
+                    return '/';
                 } else {
                     console.log("User is already existing");
                 }

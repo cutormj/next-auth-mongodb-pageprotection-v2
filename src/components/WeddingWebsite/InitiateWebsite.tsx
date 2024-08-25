@@ -60,26 +60,35 @@ const InitiateWebsite: React.FC<InitiateWebsiteProps> = ({ initiator: initiatorE
   };
 
   return (
-    <form className='initiate-website-form' onSubmit={handleSubmit}>
-      <div>
+    <form className='' onSubmit={handleSubmit}>
+      <div className=''>
+
+        <div className="flex flex-col bg-red-300 h-32">
+          <div className="bg-red-200 ">
+            test
+          </div>
+        </div>
+
         <h3>Couple</h3>
-        <label>
-          Groom
-          <input
-            type="text"
-            placeholder='First Name'
-            name="groomFirstName"
-            value={weddingData.couples.groom.name.first}
-            onChange={(e) => handleCoupleChange(e, 'groom', 'first')}
-          />
-          <input
-            type="text"
-            placeholder='Last Name'
-            name="groomLastName"
-            value={weddingData.couples.groom.name.last}
-            onChange={(e) => handleCoupleChange(e, 'groom', 'last')}
-          />
-        </label>
+        <div className=''>
+          <label>
+            Groom
+            <input
+              type="text"
+              placeholder='First Name'
+              name="groomFirstName"
+              value={weddingData.couples.groom.name.first}
+              onChange={(e) => handleCoupleChange(e, 'groom', 'first')}
+            />
+            <input
+              type="text"
+              placeholder='Last Name'
+              name="groomLastName"
+              value={weddingData.couples.groom.name.last}
+              onChange={(e) => handleCoupleChange(e, 'groom', 'last')}
+            />
+          </label>
+        </div>
         <label>
             Bride
           <input

@@ -3,7 +3,11 @@ import { doLogout } from "@/app/actions"
 const Logout = () => {
   return (
     <form action={doLogout}>
-        <button className="bg-blue-400 my-2 text-white p-1 rounded" type="submit">Logout</button>
+        <button className="text-red-400" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
+          </svg>
+        </button>
     </form>
   )
 }
