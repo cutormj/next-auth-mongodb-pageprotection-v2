@@ -1,8 +1,9 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
-import { UserModel } from "./model/user-model";
-import { dbConnect } from "./lib/mongo";
+import User from "./model/user-model";
+import dbConnect from "./lib/mongo";
+import portfolio from "./app/[id]/page";
 
 export const {
     handlers: { GET, POST },
@@ -41,15 +42,18 @@ export const {
         async signIn({ user, account, profile }) {
             try {
                 await dbConnect();
-                const existingUser = await UserModel.findOne({ email: user.email });
+                const existingUser = await User.findOne({ email: user.email });
                 if (!existingUser) {
-                    // const newUser = new UserModel({
-                    //     email: user.email,
-                    // });
-                    // await newUser.save();
-                    // console.log("NEW USER IS ADDED:", user);
-                    console.log("NOTE!!! Auto Registration from Provider Sign-In is disabled. Do it manually or please check auth.ts");
-                    return '/';
+                    const newUser = new User({
+                        name: user.name,
+                        email: user.email,
+                        username: "user" + user.email,
+                        image: user.image,
+                    });
+                    await newUser.save();
+                    console.log("NEW USER IS ADDED:", user);
+                    // console.log("NOTE!!! Auto Registration from Provider Sign-In is disabled. Do it manually or please check auth.ts");
+                    // return '/';
                 } else {
                     console.log("User is already existing");
                 }
@@ -61,3 +65,9 @@ export const {
         },
     },
 });
+
+
+
+
+
+
